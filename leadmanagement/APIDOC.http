@@ -1,0 +1,52 @@
+###
+POST http://127.0.0.1:8000/lead/
+Content-Type: application/json
+Authorization: Basic asus:haritwelve
+
+{
+    "name":"preman",
+    "phone":"7832149548",
+    "email":"prem@gmail.com",
+    "course":"ml",
+    "source":"Walks-in",
+    "status":"Converted",
+    "notes":"evening batch"
+}
+
+###
+GET http://127.0.0.1:8000/lead/
+Content-Type: application/json
+Authorization: Basic asus:haritwelve
+
+###
+PUT http://127.0.0.1:8000/update/1/
+Content-Type: application/json
+Authorization: Basic asus:haritwelve
+
+
+{
+    "id": 1,
+    "name": "anu",
+    "phone": "8590720093",
+    "email": "anu@gmail.com",
+    "course": "python fullstack",
+    "source": "Website",
+    "status": "Contacted",
+    "added_date": "2026-10-15",
+    "notes": "evening batch"
+}
+
+###
+GET http://127.0.0.1:8000/update/1/
+Content-Type: application/json
+Authorization: Basic asus:haritwelve
+
+###
+GET http://127.0.0.1:8000/lead?search=preman
+Content-Type: application/json
+Authorization: Basic asus:haritwelve
+
+###
+GET http://127.0.0.1:8000/lead?ordering=name
+Content-Type: application/json
+Authorization: Basic asus:haritwelve
